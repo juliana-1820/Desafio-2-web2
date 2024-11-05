@@ -1,0 +1,23 @@
+salario_atual = float(input("Digite o salário atual do colaborador: "))
+
+if salario_atual <= 280:
+    percentual_aumento = 20
+elif salario_atual <= 700:
+    percentual_aumento = 15
+elif salario_atual <= 1500:
+    percentual_aumento = 10
+else:
+    percentual_aumento = 5
+
+
+valor_aumento = salario_atual * (percentual_aumento / 100)
+novo_salario = salario_atual + valor_aumento
+
+inflacao = 3.8
+valor_aumento_real = valor_aumento * (1 - inflacao / 100)
+
+print("Salário antes do reajuste: R$ {:.2f}".format(salario_atual))
+print("Percentual de aumento aplicado: {}%".format(percentual_aumento))
+print("Valor do aumento: R$ {:.2f}".format(valor_aumento))
+print("Novo salário, após o aumento: R$ {:.2f}".format(novo_salario))
+print("Valor do aumento real (com o desconto da inflação): R$ {:.2f}".format(valor_aumento_real))
